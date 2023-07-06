@@ -13,21 +13,21 @@ namespace RabbitMQ.Controllers
 	[ApiController]
 	public class BookingController : ControllerBase
 	{
-		private readonly RabbitMQService2 _rabbitMQService;
+		private readonly RabbitMQService _rabbitMQService;
 		private readonly IMessageProducer _messageProducer;
 		private readonly ILogger<BookingController> _logger;
-		public List<Booking> _bookings = new List<Booking>();
-		public List<string> _booking1 = new List<string>();
-		private readonly ConnectionFactory _connectionFactory;
-		private readonly string _exchangeName;
-		private readonly string _routingKey;
-		private readonly string _queueName;
+		//public List<Booking> _bookings = new List<Booking>();
+		//public List<string> _booking1 = new List<string>();
+		//private readonly ConnectionFactory _connectionFactory;
+		//private readonly string _exchangeName;
+		//private readonly string _routingKey;
+		//private readonly string _queueName;
 
-		public BookingController(IMessageProducer messageProducer, ILogger<BookingController> logger, IConfiguration configuration, RabbitMQService2 rabbitMQService)
+		public BookingController(IMessageProducer messageProducer, ILogger<BookingController> logger, IConfiguration configuration, RabbitMQService rabbitMQService)
 		{
 			_rabbitMQService = rabbitMQService;
-			//_messageProducer = messageProducer;
-			//_logger = logger;
+			_messageProducer = messageProducer;
+			_logger = logger;
 			//var rabbitMQConfig = configuration.GetSection("RabbitMQ").Get<RabbitMQConfig>();
 			//_connectionFactory = new ConnectionFactory
 			//{
@@ -41,19 +41,22 @@ namespace RabbitMQ.Controllers
 			//_routingKey = rabbitMQConfig.RoutingKey;
 			//_queueName = rabbitMQConfig.QueueName;
 			
-			for (int i = 0; i < 500000; i++)
-			{
-				_bookings.Add(new Booking { Id = i+1, PassengerName = "Ram" });
+			//for (int i = 0; i < 50; i++)
+			//{
+			//	_bookings.Add(new Booking { Id = i+1, PassengerName = "Ram" });
 
-			}
+			//}
 		}
+
 		[HttpPost]
-		public IActionResult PublishMessage(int batchSize)
+		public IActionResult PublishMessage(string batchSize)
 		{
 
 			try
 			{
-				_rabbitMQService.PublishMessagesInBatch(_bookings, batchSize);
+				_rabbitMQService.PublishMessage(batchSize);
+				//_rabbitMQService.PublishMessagesInBatch(_bookings, batchSize);
+
 				return Ok("Message published successfully.");
 			}
 			catch (Exception ex)

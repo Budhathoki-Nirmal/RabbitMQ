@@ -30,10 +30,10 @@ namespace RabbitMQ.Services
 			_exchangeName = rabbitMQConfig.ExchangeName;
 			_routingKey = rabbitMQConfig.RoutingKey;
 			_queueName = rabbitMQConfig.QueueName;
-			const int maxRetries = 3;
-			int retryCount = 0;
-			while (retryCount < maxRetries)
-			{
+			//const int maxRetries = 3;
+			//int retryCount = 0;
+			//while (retryCount < maxRetries)
+			//{
 				try
 				{
 					_connection = _connectionFactory.CreateConnection();
@@ -46,23 +46,23 @@ namespace RabbitMQ.Services
 				catch (Exception ex)
 				{
 					Console.WriteLine($"An error occurred while publishing the message: {ex.Message}");
-					retryCount++;
-					Console.WriteLine($"Retrying... Attempt {retryCount} of {maxRetries}");
-					Thread.Sleep(1000);
+					///retryCount++;
+					//Console.WriteLine($"Retrying... Attempt {retryCount} of {maxRetries}");
+					//Thread.Sleep(1000);
 				}
-			}
+			//}
 
-			if (retryCount >= maxRetries)
-			{
-				Console.WriteLine($"Failed to publish the message after {maxRetries} attempts.");
-			}
+			//if (retryCount >= maxRetries)
+			//{
+			//	Console.WriteLine($"Failed to publish the message after {maxRetries} attempts.");
+			//}
 
 
 		}
 
 		public async Task PublishMessage(string message)
 		{
-			for (int i = 0; i < 50000; i++)
+			for (int i = 0; i < 50; i++)
 			{
 				try
 				{

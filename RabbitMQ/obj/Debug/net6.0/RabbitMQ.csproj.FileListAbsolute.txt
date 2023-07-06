@@ -6,6 +6,7 @@ C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\RabbitMQ.runtimec
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\RabbitMQ.dll
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\RabbitMQ.pdb
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\Polly.dll
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -32,4 +33,3 @@ C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\obj\Debug\net6.0\refint\RabbitMQ.d
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\obj\Debug\net6.0\RabbitMQ.pdb
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\obj\Debug\net6.0\RabbitMQ.genruntimeconfig.cache
 C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\obj\Debug\net6.0\ref\RabbitMQ.dll
-C:\Users\Acer\Desktop\SOLID\RabbitMQ\RabbitMQ\bin\Debug\net6.0\Polly.dll
